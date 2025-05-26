@@ -28,7 +28,7 @@ const MovieList = ({ movies }: MovieProp) => {
             src={
               movie?.backdrop_path
                 ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
-                : 'src/assets/no-image.png'
+                : '/src/assets/no-image.png'
             }
             alt={`Image for ${movie?.title}`}
             className="rounded-2xl shadow-2xl"

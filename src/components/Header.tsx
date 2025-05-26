@@ -3,7 +3,7 @@ const Header = () => {
     <header className="flex flex-col items-center py-8 text-center ">
       <img
         className="size-40 hover:rotate-30 duration-400 ease-in-out"
-        src="src\assets\pop-corn.png"
+        src="/src/assets/pop-corn.png"
         alt="icon"
       />
       <h1 className="font-roboto font-bold uppercase text-4xl text-graphite-gray">
