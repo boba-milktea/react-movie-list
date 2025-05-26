@@ -1,15 +1,13 @@
 import type { MovieProp } from '../types/movieTypes';
+import notFound from '../assets/cannot-find.png';
+import noImage from '../assets/no-image.png';
 import ReadMore from './ReadMore';
 
 const MovieList = ({ movies }: MovieProp) => {
   if (movies.length === 0) {
     return (
       <div className="p-2 m-4 h-xl flex items-center justify-center">
-        <img
-          className="w-3xs"
-          src="src\assets\cannot-find.png"
-          alt="a surprised cute buddy"
-        />
+        <img className="w-3xs" src={notFound} alt="a surprised cute buddy" />
         <h2 className="p-4 rounded-2xl bg-bubblegum-pink font-bold font-graphite-gray text-center">
           ...Oops! No movie found, please try another word.
         </h2>
@@ -28,7 +26,7 @@ const MovieList = ({ movies }: MovieProp) => {
             src={
               movie?.backdrop_path
                 ? `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
-                : '/src/assets/no-image.png'
+                : noImage
             }
             alt={`Image for ${movie?.title}`}
             className="rounded-2xl shadow-2xl"
